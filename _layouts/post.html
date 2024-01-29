@@ -21,8 +21,18 @@
 	<div class="inner">
 		<header class="major">
 			<h1>{{ page.title }}</h1>
+			<h3>{{ page.date | date: "%-d %B %Y" }} - {{ page.author }}</h3>
 		</header>
-		{% if page.image %}<span class="image main"><img src="{{ site.baseurl }}/{{ page.image }}" alt="" /></span>{% endif %}
+		{% if page.image %}
+		<span class="image main">
+			<img src="{{ site.baseurl }}/{{ page.image }}" alt="" />
+			{% if page.image-credit %}
+			<br/><a href="{{ page.image-credit-url }}">{{ page.image-credit }}
+			{% endif %}
+		</span>
+		</a>
+		<hr/>
+		{% endif %}
 		{{ content }}
 	</div>
 </section>
