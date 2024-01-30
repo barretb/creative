@@ -3,7 +3,7 @@ title: Landing
 layout: landing
 description: 'Just a bit of Barrets creative side'
 image: assets/images/pic07.jpg
-nav-menu: true
+nav-menu: false
 ---
 
 <!-- Main -->
